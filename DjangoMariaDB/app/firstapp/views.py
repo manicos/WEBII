@@ -41,7 +41,6 @@ def login(request):
 
         #RETURN RESPONSE
 
-
     else:
         responseData = {}
         responseData['result'] = 'error'

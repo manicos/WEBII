@@ -28,11 +28,11 @@ class ApiKey():
 
     def check(self,request):
         try:
-            apiKey = request.headers["x-api-key"]
+            apiKey = request.headers["user-api-key"]
         except KeyError:
             response_data = {}
             response_data['result'] = 'error'
-            response_data['message'] = 'x-api-key is required'
+            response_data['message'] = 'user-api-key is required'
             return response_data
         return True
 
