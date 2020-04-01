@@ -26,3 +26,7 @@ Este les devolverá un Json con su Password Hash en el key password.
 #8 Enviar liga de GitHub con su proyecto con el EndPoint Login desarrollado antes del viernes 27 de Marzo
 
 #9 20 de Marzo de 9:00 a.m. a 11:00 a.m. estaré en línea en skype para resolver dudas
+
+#10 Realizar el endppint client/list: Debe validar que se haya enviado una user-api-key y que esta es váida del usuario que realiza la petición. Se recomienda integrarla en una misma función. 
+
+#11 Entregá el día 3 de Abril antes de las 9 p.m.
