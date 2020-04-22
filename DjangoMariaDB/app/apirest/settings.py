@@ -134,6 +134,5 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-STATIC_URL = '/static/'
 
-#API_KEY_CUSTOM_HEADER = "HTTP_X_API_KEY"
+STATIC_URL = '/static/'
