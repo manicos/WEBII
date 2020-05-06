@@ -5,7 +5,7 @@ networks:
 
 services:
 
-  nginx:
+ nginx:
     image: nginx
     container_name: nginx
     ports:
@@ -13,8 +13,8 @@ services:
       - "443:443"
     volumes:
       - ./nginx:/etc/nginx/conf.d
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
+#     - ./data/certbot/conf:/etc/letsencrypt
+#     - ./data/certbot/www:/var/www/certbot
     networks:
       - my-network
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
@@ -39,7 +39,7 @@ services:
       - my-network
 
   app:
-    container_name: claseweb.pikit.mx
+    container_name: claseweb2.pikit.mx
     build:
       context: .
     ports:
@@ -53,11 +53,11 @@ services:
     networks:
       - my-network
 
-  certbot:
-    image: certbot/certbot
-    volumes:
-      - ./data/certbot/conf:/etc/letsencrypt
-      - ./data/certbot/www:/var/www/certbot
-    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
-    networks:
-      - my-network
+#  certbot:
+#    image: certbot/certbot
+#    volumes:
+#      - ./data/certbot/conf:/etc/letsencrypt
+#      - ./data/certbot/www:/var/www/certbot
+#    entrypoint: "/bin/sh -c 'trap exit TERM; while :; do certbot renew; sleep 12h & wait $${!}; done;'"
+#    networks:
+#      - my-network
