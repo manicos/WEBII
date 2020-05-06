@@ -39,9 +39,9 @@ services:
       - my-network
 
   app:
+    container_name: claseweb.pikit.mx
     build:
       context: .
-    container_name: claseweb.pikit.mx
     ports:
       - "82:8000"
     volumes:
