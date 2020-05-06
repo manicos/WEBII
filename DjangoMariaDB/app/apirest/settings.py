@@ -25,7 +25,7 @@ SECRET_KEY = 'x68+w!+!lyila9fhu380w)q&x!szim06ki)-+$7rg&c07y5n%0'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['3.134.106.77','claseweb.pikit.mx']
+ALLOWED_HOSTS = ['3.134.106.77','claseweb2.pikit.mx']
 
 
 # Application definition
