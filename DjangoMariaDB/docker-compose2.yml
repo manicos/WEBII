@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  my-network:
+
+services:
+
+  app:
+    container_name: apilogs
+    build:
+      context: .
+    ports:
+      - "9897:8000"
+    volumes:
+      - ./app:/app
+    depends_on:
+      - db
+    command: >
+      sh -c "python manage.py runserver 0.0.0.0:8000"
+    networks:
+      - my-network
